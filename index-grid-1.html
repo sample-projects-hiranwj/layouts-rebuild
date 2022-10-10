@@ -7,7 +7,41 @@
     <title>Grid Layout 1</title>
     <style>
         #container{
-            
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "nav main"
+            "footer footer";
+            background-color: yellow;
+            width: 450px;
+            height: 450px;
+            justify-items: center;
+            /* "Justify-content" cannot use in grid */
+        }
+
+        header{
+            grid-area: header;
+            background-color: chocolate;
+            justify-self: center;
+            align-self: center;
+            /* width: 100%; */
+            /* text-align: center; */
+        }
+
+        nav{
+            grid-area: nav;
+            background-color: darkolivegreen;
+        }
+
+        main{
+            grid-area: main;
+            background-color: crimson;
+        }
+
+        footer{
+            grid-area: footer;
+            background-color: darksalmon;
+            align-self: end;
         }
     </style>
 </head>
